@@ -1,0 +1,14 @@
+. ~/.profile v bin sto bi rabotal reader
+
+
+# read these topics and print them to stdout
+time ros_readbagfile <mybagfile.bag> [topic1] [topic2] [topic3] [...]
+
+time ros_readbagfile <mybagfile.bag> [topic1] [topic2] [topic3] [...] | tee topics.yaml
+
+rosbag record -O name.bag -a
+
+rosbag record --duration=30 --output-name=/tmp/mybagfile.bag \
+    /topic1 /topic2 /topic3
+    
+    time rosbag info demo.bag 
