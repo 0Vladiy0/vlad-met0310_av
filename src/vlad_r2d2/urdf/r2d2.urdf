@@ -420,11 +420,13 @@
         <cylinder length="0.05" radius="0.04"/>
       </geometry>
       <material name="black"/>
+      <origin xyz="0 0 0" rpy="0 1.57075 0"/>
     </visual>
     <collision>
       <geometry>
         <cylinder length="0.05" radius="0.04"/>
       </geometry>
+      <origin xyz="0 0 0" rpy="0 1.57075 0"/>
     </collision>
     <inertial>
       <mass value="1"/>
@@ -432,10 +434,11 @@
     </inertial>
   </link>
 
-  <joint name="lenstobox" type="fixed">
+  <joint name="lenstobox" type="prismatic">
     <parent link="box"/>
     <child link="lens"/>
-    <origin rpy="0 1.57075 0" xyz="0.025 0 0"/>
+    <limit effort="10" lower="-0.02" upper="0.02" velocity="0.5"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
   </joint>
 
 </robot>
