@@ -2,14 +2,14 @@
 <robot name="physics">
 
 <material name="blue">
-    <color rgba="0 0 0.8 1"/>
-  </material>
-  <material name="black">
-    <color rgba="0 0 0 1"/>
-  </material>
-  <material name="white">
-    <color rgba="1 1 1 1"/>
-  </material>
+  <color rgba="0 0 0.8 1"/>
+</material>
+<material name="black">
+  <color rgba="0 0 0 1"/>
+</material>
+<material name="white">
+  <color rgba="1 1 1 1"/>
+</material>
 
   <link name="base_link">
     <visual>
