@@ -72,6 +72,11 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
+        base_scan:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
         box:
           Alpha: 1
           Show Axes: false
@@ -169,6 +174,8 @@ Visualization Manager:
           Value: true
         base_link:
           Value: true
+        base_scan:
+          Value: true
         box:
           Value: true
         gripper_pole:
@@ -212,30 +219,33 @@ Visualization Manager:
       Tree:
         odom:
           base_footprint:
-            base_link:
-              gripper_pole:
-                left_gripper:
-                  left_tip:
-                    {}
-                right_gripper:
-                  right_tip:
-                    {}
-              head:
-                box:
-                  lens:
-                    {}
-              left_leg:
-                left_base:
-                  left_back_wheel:
-                    {}
-                  left_front_wheel:
-                    {}
-              right_leg:
-                right_base:
-                  right_back_wheel:
-                    {}
-                  right_front_wheel:
-                    {}
+            {}
+          base_link:
+            gripper_pole:
+              left_gripper:
+                left_tip:
+                  {}
+              right_gripper:
+                right_tip:
+                  {}
+            head:
+              box:
+                base_scan:
+                  {}
+                lens:
+                  {}
+            left_leg:
+              left_base:
+                left_back_wheel:
+                  {}
+                left_front_wheel:
+                  {}
+            right_leg:
+              right_base:
+                right_back_wheel:
+                  {}
+                right_front_wheel:
+                  {}
       Update Interval: 0
       Value: true
   Enabled: true
@@ -266,7 +276,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 2.20222806930542
+      Distance: 2.3638575077056885
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -274,17 +284,17 @@ Visualization Manager:
         Value: false
       Field of View: 0.7853981852531433
       Focal Point:
-        X: 0
-        Y: 0
-        Z: 0
+        X: 0.07444275915622711
+        Y: 0.000863129273056984
+        Z: -0.17039696872234344
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.7453970909118652
+      Pitch: 0.3253973126411438
       Target Frame: <Fixed Frame>
-      Yaw: 0.7335845232009888
+      Yaw: 0.6335835456848145
     Saved: ~
 Window Geometry:
   Displays:
@@ -302,5 +312,5 @@ Window Geometry:
   Views:
     collapsed: false
   Width: 1216
-  X: 165
-  Y: 168
+  X: 427
+  Y: 160
