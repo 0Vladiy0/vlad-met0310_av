@@ -42,6 +42,7 @@
     </collision>
     <xacro:default_inertial mass="10"/>
   </link>
+  
 
   <xacro:macro name="wheel" params="prefix suffix reflect">
 
@@ -206,7 +207,7 @@
     <xacro:default_inertial mass="2"/>
   </link>
 
-  <joint name="head_swivel" type="continuous">
+  <joint name="head_swivel" type="fixed">
     <parent link="base_link"/>
     <child link="head"/>
     <axis xyz="0 0 1"/>
@@ -259,24 +260,6 @@
     <origin xyz="0 0 0" rpy="0 0 0"/>
   </joint>
   
-  
-  <link name="base_footprint">
-  </link>
-  
-  <joint name="basefloor" type="fixed">
-  	<parent link="base_footprint"/>
-  	<child link="base_link"/>
-  	<origin xyz="0 0 ${bodylen/2+0.1+wheeldiam}"/>
-  </joint>
-  
-  
-  
-  
-  <joint name="scan_joint" type="fixed">
-    <parent link="box"/>
-    <child link="base_scan"/>
-    <origin xyz="0 0 0.06" rpy="0 0 0"/>
-  </joint>
 
   <link name="base_scan">
     <visual>
@@ -302,6 +285,22 @@
                izz="0.001" />
     </inertial>
   </link>
+  
+  <joint name="scan_joint" type="fixed">
+    <parent link="box"/>
+    <child link="base_scan"/>
+    <origin xyz="0 0 0.06" rpy="0 0 0"/>
+  </joint>
+  
+  
+  <link name="base_footprint">
+  </link>
+  
+  <joint name="basefloor" type="fixed">
+  	<parent link="base_link"/>
+  	<child link="base_footprint"/>
+  	<origin xyz="0 0 ${bodylen/2+0.1+wheeldiam}"/>
+  </joint>
   
   
   
